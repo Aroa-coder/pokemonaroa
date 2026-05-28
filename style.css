@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(#1a2a6c, #b21f1f, #fdbb2d);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin: 20px 0 10px;
+  text-shadow: 0 0 15px cyan, 0 0 25px blue;
+}
+
+#game {
+  width: 900px;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+#battlefield {
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.side {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sprite {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.sprite img {
+  width: 110px;
+}
+
+.info { width: 60%; }
+
+.hp-bar, .energy-bar {
+  width: 100%;
+  height: 12px;
+  background: #333;
+  margin-top: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hp-fill { height: 100%; background: limegreen; transition: 0.4s; }
+.energy-fill { height: 100%; background: cyan; transition: 0.4s; }
+
+#log {
+  height: 120px;
+  overflow-y: auto;
+  background: black;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+#actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+  #game { width: 95%; }
+
+  #battlefield {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .side {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  #actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  button {
+    flex: 1;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokémon Arena</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="title">⚡ POKÉMON ARENA ⚡</h1>
+
+<div id="game">
+
+  <div id="battlefield">
+
+    <div class="side enemy">
+      <div id="enemySprite" class="sprite">?</div>
+      <div class="info">
+        <div id="enemyName"></div>
+        <div class="hp-bar"><div id="enemyHp" class="hp-fill"></div></div>
+        <div class="energy-bar"><div id="enemyEnergy" class="energy-fill"></div></div>
+      </div>
+    </div>
+
+    <div class="side player">
+      <div class="info">
+        <div id="playerName"></div>
+        <div class="hp-bar"><div id="playerHp" class="hp-fill"></div></div>
+        <div class="energy-bar"><div id="playerEnergy" class="energy-fill"></div></div>
+      </div>
+      <div id="playerSprite" class="sprite">?</div>
+    </div>
+
+  </div>
+
+  <div id="log"></div>
+
+  <div id="actions">
+    <button onclick="attack()">Atacar</button>
+    <button onclick="special()">Especial</button>
+    <button onclick="heal()">Curar</button>
+    <button onclick="switchPokemon()">Cambiar</button>
+  </div>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
